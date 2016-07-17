@@ -344,3 +344,58 @@ Log started: 16 Jul 2016 5:02:42pm
 
 (Debug)  COM library initialized
 (Debug)  YSE System object initialized
+
+**********************************************************
+=== start of YSE log ===
+Log started: 16 Jul 2016 10:48:12pm
+
+(Debug)  COM library initialized
+(Debug)  YSE System object initialized
+(Warning) Error while loading file:  file not found for C:\repos\libYSE-1.0_windows\yse-soundengine\bin\demo.mid
+
+**********************************************************
+=== start of YSE log ===
+Log started: 16 Jul 2016 10:48:34pm
+
+(Debug)  COM library initialized
+(Debug)  YSE System object initialized
+(Warning) Error while loading file:  file not found for d:\repos\libYSE-1.0_windows\yse-soundengine\bin\demo.mid
+
+**********************************************************
+=== start of YSE log ===
+Log started: 16 Jul 2016 10:49:14pm
+
+(Debug)  COM library initialized
+(Debug)  YSE System object initialized
+(Warning) Error while loading file:  file not found for d:\repos\YSE\yse-soundengine\bin\demo.mid
+
+**********************************************************
+=== start of YSE log ===
+Log started: 16 Jul 2016 10:49:28pm
+
+(Debug)  COM library initialized
+(Debug)  YSE System object initialized
+(Warning) Error while loading file:  file not found for d:\repos\YSE\yse-soundengine\bin\demo.mid
+
+**********************************************************
+=== start of YSE log ===
+Log started: 16 Jul 2016 10:49:53pm
+
+(Debug)  COM library initialized
+(Debug)  YSE System object initialized
+(Warning) Error while loading file:  file not found for d:\repos\YSE\yse-soundengine\bin\demo.mid
+
+**********************************************************
+=== start of YSE log ===
+Log started: 16 Jul 2016 10:50:31pm
+
+(Debug)  COM library initialized
+(Debug)  YSE System object initialized
+(Warning) Error while loading file:  file not found for d:\repos\YSE\yse-soundengine\bin\demo.mid
+
+**********************************************************
+=== start of YSE log ===
+Log started: 16 Jul 2016 10:51:53pm
+
+(Debug)  COM library initialized
+(Debug)  YSE System object initialized

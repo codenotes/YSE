@@ -189,7 +189,8 @@ int main()
 	soundPos.set(5.f, 0.f, 1.f);
 	sound.setPosition(soundPos);
 
-	midiFile.create(R"(C:\repos\libYSE-1.0_windows\yse-soundengine\bin\demo.mid)");
+	//midiFile.create(R"(c:\repos\libYSE-1.0_windows\yse-soundengine\bin\demo.mid)");
+	midiFile.create(R"(D:\repos\yse-soundengine\bin\demo.mid)");
 
 	//	midiFile.connect(&synth);
 	midiFile.connect(&t);
@@ -209,7 +210,8 @@ int main()
 		if (_kbhit()) {
 			char ch = _getch();
 			YSE::Vec pos = YSE::Listener().getPosition();
-			switch (ch) {
+			switch (ch)
+			{
 			case '1': midiFile.play(); break;
 			case '2': midiFile.pause(); break;
 			case '3': midiFile.stop(); break;
