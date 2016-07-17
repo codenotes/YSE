@@ -158,16 +158,16 @@ test t;
 int main()
 {
 
-	YSE::SYNTH::samplerConfig s;
+//	YSE::SYNTH::samplerConfig s;
 
 
-	SineWaveVoice voice;
+//	SineWaveVoice voice;
 	
-
+	
 
 	YSE::System().init();
 
-	synth.create();
+//	synth.create();
 	t.create();
 
 	//s.name("booger");
@@ -178,12 +178,14 @@ int main()
 
 	//{
 
-		synth.addVoices(&voice, 16, 1);
+//		synth.addVoices(&voice, 16, 1);
 	//}
 
 //	sound.create(synth).play();
 	sound.create(t).play();
 
+	//TODO: add callback here and I think its all good.
+	//t.onNoteEvent()
 
 
 	soundPos.set(5.f, 0.f, 1.f);

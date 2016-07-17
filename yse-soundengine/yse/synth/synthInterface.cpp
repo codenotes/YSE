@@ -224,3 +224,14 @@ YSE::SYNTH::interfaceObject & YSE::SYNTH::interfaceObject::onNoteEvent(void(*fun
   pimpl->sendMessage(m);
   return *this;
 }
+
+YSE::SYNTH::interfaceObject & YSE::SYNTH::interfaceObject::onNoteEvent2(void(*func)(bool noteOn, float * noteNumber,
+	float * velocity, int * channel)) 
+{
+	assert(pimpl != nullptr);
+	messageObject m;
+	m.ID = CALLBACK;
+	m.ptr = (void(*))func;
+	pimpl->sendMessage(m);
+	return *this;
+}

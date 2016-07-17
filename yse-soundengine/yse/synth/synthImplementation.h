@@ -57,6 +57,7 @@ namespace YSE {
 
       // callback on note events
       void(*onNoteEvent)(bool, float*, float*);
+	  void(*onNoteEvent2)(bool, float*, float*,int *);
 
       std::forward_list<MIDI::fileImpl *> midiFiles;
     };

@@ -17,7 +17,8 @@
 
 YSE::SYNTH::implementationObject::implementationObject(interfaceObject * head) 
 : head(head),
-  synthBuffer(1, STANDARD_BUFFERSIZE), ID(0), voiceID(0), onNoteEvent(nullptr) {
+  synthBuffer(1, STANDARD_BUFFERSIZE), ID(0), voiceID(0), onNoteEvent(nullptr) , onNoteEvent2(nullptr)
+{
 
   synthesizer.clearSounds();
   midiCollector.reset(SAMPLERATE);
@@ -53,16 +54,18 @@ void YSE::SYNTH::implementationObject::addVoices(YSE::SYNTH::dspVoice * voice, i
 }
 
 
-void YSE::SYNTH::implementationObject::process(YSE::SOUND_STATUS & intent) {
+void YSE::SYNTH::implementationObject::process(YSE::SOUND_STATUS & intent) 
+{
   // let juce take care of the midi parsing and buffer generation
   synthBuffer.clear();
   MidiBuffer incomingMidi;
 
   // get messages from midi files
-  for (auto i = midiFiles.begin(); i != midiFiles.end(); i++) {
+  for (auto i = midiFiles.begin(); i != midiFiles.end(); i++) 
+  {
     (*i)->getMessages(incomingMidi);
   }
-
+  //IMPORTANT
   // get messages from midi input
   midiCollector.removeNextBlockOfMessages(incomingMidi, STANDARD_BUFFERSIZE);
   
@@ -71,7 +74,10 @@ void YSE::SYNTH::implementationObject::process(YSE::SOUND_STATUS & intent) {
   synthesizer.renderNextBlock(synthBuffer, incomingMidi, 0, STANDARD_BUFFERSIZE);
 
   // alter events if there's a callback function provided
-  if (onNoteEvent != nullptr && !incomingMidi.isEmpty()) {
+  //if (onNoteEvent != nullptr && !incomingMidi.isEmpty()) //greg1
+  if (onNoteEvent2 != nullptr && !incomingMidi.isEmpty()) 
+  {
+	  //printf("Am I ever here?--------------------\n"); //dont get here
     MidiBuffer::Iterator iter(incomingMidi);
     MidiMessage m(0xf0);
     int sample;
@@ -79,7 +85,8 @@ void YSE::SYNTH::implementationObject::process(YSE::SOUND_STATUS & intent) {
       if (m.isNoteOnOrOff()) {
         float pitch = m.getNoteNumber();
         float velocity = m.getFloatVelocity();
-        onNoteEvent(m.isNoteOn(), &pitch, &velocity);
+		int channel = m.getChannel();
+        onNoteEvent2(m.isNoteOn(), &pitch, &velocity, &channel);
         m.setNoteNumber(static_cast<int>(pitch));
         m.setVelocity(velocity);
       }
