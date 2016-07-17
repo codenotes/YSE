@@ -490,3 +490,38 @@ Log started: 17 Jul 2016 12:06:24am
 
 (Debug)  COM library initialized
 (Debug)  YSE System object initialized
+
+**********************************************************
+=== start of YSE log ===
+Log started: 17 Jul 2016 12:21:23am
+
+(Debug)  COM library initialized
+(Debug)  YSE System object initialized
+
+**********************************************************
+=== start of YSE log ===
+Log started: 17 Jul 2016 12:31:13am
+
+(Debug)  COM library initialized
+(Debug)  YSE System object initialized
+
+**********************************************************
+=== start of YSE log ===
+Log started: 17 Jul 2016 12:31:42am
+
+(Debug)  COM library initialized
+(Debug)  YSE System object initialized
+
+**********************************************************
+=== start of YSE log ===
+Log started: 17 Jul 2016 12:35:27am
+
+(Debug)  COM library initialized
+(Debug)  YSE System object initialized
+
+**********************************************************
+=== start of YSE log ===
+Log started: 17 Jul 2016 12:44:16am
+
+(Debug)  COM library initialized
+(Debug)  YSE System object initialized

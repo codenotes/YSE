@@ -216,7 +216,9 @@ YSE::SYNTH::interfaceObject & YSE::SYNTH::interfaceObject::softPedal(int channel
   return *this;
 }
 
-YSE::SYNTH::interfaceObject & YSE::SYNTH::interfaceObject::onNoteEvent(void(*func)(bool noteOn, float * noteNumber, float * velocity)) {
+YSE::SYNTH::interfaceObject & YSE::SYNTH::interfaceObject::onNoteEvent(void(*func)(bool noteOn, float * noteNumber, 
+	float * velocity)) 
+{
   assert(pimpl != nullptr);
   messageObject m;
   m.ID = CALLBACK;
@@ -230,7 +232,7 @@ YSE::SYNTH::interfaceObject & YSE::SYNTH::interfaceObject::onNoteEvent2(void(*fu
 {
 	assert(pimpl != nullptr);
 	messageObject m;
-	m.ID = CALLBACK;
+	m.ID = CALLBACK2;
 	m.ptr = (void(*))func;
 	pimpl->sendMessage(m);
 	return *this;

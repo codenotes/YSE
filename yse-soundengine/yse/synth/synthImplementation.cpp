@@ -167,10 +167,23 @@ void YSE::SYNTH::implementationObject::parseMessage(const messageObject & messag
       synthesizer.handleSoftPedal(message.cb.channel, message.cb.value);
       break;
     }
-    case MESSAGE::CALLBACK: {
+
+	case MESSAGE::CALLBACK2:
+	{
+		onNoteEvent2 = (void(*)(bool, float*, float*, int *))message.ptr;
+		break;
+	}
+
+
+
+	case MESSAGE::CALLBACK: 
+	{
       onNoteEvent = (void(*)(bool, float*, float*))message.ptr;
       break;
     }
+  
+  
+  
   }
 }
 

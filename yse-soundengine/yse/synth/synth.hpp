@@ -35,6 +35,7 @@ namespace YSE {
       SOSTENUTO,
       SOFTPEDAL,
       CALLBACK,
+	  CALLBACK2,
     };
   }
 

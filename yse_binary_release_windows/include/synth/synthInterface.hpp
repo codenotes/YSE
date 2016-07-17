@@ -104,6 +104,7 @@ namespace YSE {
       // the noteNumber stays between 0-127 and velocity between 0-1. This function will
       // be called from the DSP thread, so be sure to make your own variables atomic.
       interfaceObject & onNoteEvent(void(*func)(bool noteOn, float * noteNumber, float * velocity));
+	  interfaceObject & onNoteEvent2(void(*func)(bool noteOn, float * noteNumber, float * velocity, int * channel));
 
       int getNumVoices() { return numVoices; }
 

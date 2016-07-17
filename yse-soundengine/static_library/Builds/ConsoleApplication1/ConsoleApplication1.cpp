@@ -154,6 +154,11 @@ YSE::Vec soundPos;
 
 test t;
 
+void notecb(bool noteOn, float * noteNumber, float * velocity, int* channel)
+{
+	printf("!%d %f %f %d\n", noteOn, *noteNumber, *velocity, *channel);
+}
+
 
 int main()
 {
@@ -185,7 +190,8 @@ int main()
 	sound.create(t).play();
 
 	//TODO: add callback here and I think its all good.
-	//t.onNoteEvent()
+	t.onNoteEvent2(notecb);
+	
 
 
 	soundPos.set(5.f, 0.f, 1.f);

@@ -146,7 +146,7 @@ void YSE::MIDI::fileImpl::getMessages(MidiBuffer & incomingMidi) {
   while ((currentSample - startSample) < (Int)STANDARD_BUFFERSIZE && currentEvent < sequence.getNumEvents())
   {  
   
-	  printf("stuff here %d\n", sequence.getEventPointer(currentEvent)->message.getNoteNumber());
+	  //printf("stuff here %d\n", sequence.getEventPointer(currentEvent)->message.getNoteNumber());
 	incomingMidi.addEvent(sequence.getEventPointer(currentEvent)->message, currentSample - startSample);
     currentEvent++;
     currentSample = (Int)(sequence.getEventTime(currentEvent) * SAMPLERATE);
