@@ -198,7 +198,7 @@ int main()
 	sound.setPosition(soundPos);
 
 	//midiFile.create(R"(c:\repos\libYSE-1.0_windows\yse-soundengine\bin\demo.mid)");
-	midiFile.create(R"(D:\repos\yse-soundengine\bin\demo.mid)");
+	midiFile.create(R"(c:\temp\demo.mid)");
 
 	//	midiFile.connect(&synth);
 	midiFile.connect(&t);

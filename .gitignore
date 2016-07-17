@@ -25,7 +25,6 @@ nbproject/*
 *.user
 *.sdf
 *.opensdf
-*.suo
 *.log
 *.tlog
 *.idb

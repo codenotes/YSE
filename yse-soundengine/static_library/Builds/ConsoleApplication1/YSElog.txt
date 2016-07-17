@@ -525,3 +525,18 @@ Log started: 17 Jul 2016 12:44:16am
 
 (Debug)  COM library initialized
 (Debug)  YSE System object initialized
+
+**********************************************************
+=== start of YSE log ===
+Log started: 17 Jul 2016 10:37:16am
+
+(Debug)  COM library initialized
+(Debug)  YSE System object initialized
+(Warning) Error while loading file:  file not found for D:\repos\yse-soundengine\bin\demo.mid
+
+**********************************************************
+=== start of YSE log ===
+Log started: 17 Jul 2016 10:38:34am
+
+(Debug)  COM library initialized
+(Debug)  YSE System object initialized
