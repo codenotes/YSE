@@ -5,15 +5,15 @@
 
 #include <iostream>
 #include <cstdlib>
-#include "yse.hpp"
+#include "yse/yse.hpp"
 #ifdef YSE_WINDOWS
 #include <conio.h>
 #else
 #include "wincompat.h"
 #endif
 
-#include "music/note.hpp"
-#include "synth/synthInterface.hpp"
+#include "yse/music/note.hpp"
+#include "yse/synth/synthInterface.hpp"
 #include "windows.h"
 /* midifiles
 
@@ -195,7 +195,7 @@ int main()
 	t.onNoteEvent2(notecb);
 	
 
-
+	 
 //	soundPos.set(5.f, 0.f, 1.f);
 //	sound.setPosition(soundPos);
 
@@ -203,7 +203,7 @@ int main()
 	
 	
 	
-	midiFile.create(R"(c:\temp\demo.mid)");
+	midiFile.create2(R"(c:\temp\demo.mid)");
 
 	//	midiFile.connect(&synth);
 	midiFile.connect(&t);
@@ -239,8 +239,8 @@ int main()
 			}
 		}
 
-		YSE::System().sleep(2000); //doesn't seem to matter to the midiplayer, think this is just for the above loop
-		printf("------------------CYCLE\n");
+		YSE::System().sleep(100); //doesn't seem to matter to the midiplayer, think this is just for the above loop
+		//printf("------------------CYCLE\n");
 		YSE::System().update();
 
 	}

@@ -24,6 +24,7 @@ namespace YSE {
       file();
       ~file();
       bool create(const std::string & fileName);
+	  bool create2(char * fileName);
 
       // connected synths will read from this midifile,
       // next to parsing their own midi input.

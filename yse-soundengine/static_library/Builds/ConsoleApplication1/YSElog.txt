@@ -610,3 +610,15 @@ Log started: 18 Jul 2016 9:36:16am
 === start of YSE log ===
 Log started: 18 Jul 2016 9:36:56am
 
+
+**********************************************************
+=== start of YSE log ===
+Log started: 18 Jul 2016 10:32:31am
+
+
+**********************************************************
+=== start of YSE log ===
+Log started: 18 Jul 2016 11:55:40am
+
+(Debug)  COM library initialized
+(Debug)  YSE System object initialized

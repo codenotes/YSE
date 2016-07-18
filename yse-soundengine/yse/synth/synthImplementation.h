@@ -16,7 +16,7 @@
 #include "../utils/lfQueue.hpp"
 #include "../dsp/dspObject.hpp"
 #include "samplerSound.h"
-#include "synthInterface.hpp"
+#include "synth/synthInterface.hpp"
 #include <forward_list>
 #include "../midi/midifileImplementation.h"
 

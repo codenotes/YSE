@@ -203,7 +203,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(REPOS)repos\YSE\yse_binary_release_windows\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(REPOS)repos\YSE\yse-soundengine\</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WholeProgramOptimization>false</WholeProgramOptimization>
     </ClCompile>

@@ -26,6 +26,13 @@ bool YSE::MIDI::file::create(const std::string & filename) {
   return pimpl->create(filename);
 }
 
+bool YSE::MIDI::file::create2(char * filename) 
+{
+	return pimpl->create(filename);
+}
+
+
+
 void YSE::MIDI::file::play() {
   pimpl->play();
 }
