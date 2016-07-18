@@ -32,24 +32,24 @@ class test :public YSE::SYNTH::interfaceObject
 {
 
 	
-	 interfaceObject & noteOn(int channel, int noteNumber, float velocity)
-	{
+	// interfaceObject & noteOn(int channel, int noteNumber, float velocity)
+	//{
 
-		cout << "1" << endl;
-		return *this;
-	}
-	
-	  interfaceObject & noteOff(int channel, int noteNumber)
-	{
-		cout << "2" << endl;
-		return *this;
-	}
+	//	cout << "1" << endl;
+	//	return *this;
+	//}
+	//
+	//  interfaceObject & noteOff(int channel, int noteNumber)
+	//{
+	//	cout << "2" << endl;
+	//	return *this;
+	//}
 
-	  interfaceObject & noteOn(const YSE::MUSIC::note & note)
-	{
-		cout << "3" << endl;
-		return *this;
-	}
+	//  interfaceObject & noteOn(const YSE::MUSIC::note & note)
+	//{
+	//	cout << "3" << endl;
+	//	return *this;
+	//}
 
 
 	/*interfaceObject & addVoices(const YSE::SYNTH::samplerConfig & voice, int numVoices)
@@ -194,10 +194,13 @@ int main()
 	
 
 
-	soundPos.set(5.f, 0.f, 1.f);
-	sound.setPosition(soundPos);
+//	soundPos.set(5.f, 0.f, 1.f);
+//	sound.setPosition(soundPos);
 
 	//midiFile.create(R"(c:\repos\libYSE-1.0_windows\yse-soundengine\bin\demo.mid)");
+	
+	
+	
 	midiFile.create(R"(c:\temp\demo.mid)");
 
 	//	midiFile.connect(&synth);
@@ -229,7 +232,7 @@ int main()
 			}
 		}
 
-		YSE::System().sleep(100);
+		YSE::System().sleep(50);
 		YSE::System().update();
 
 	}
