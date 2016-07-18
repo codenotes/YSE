@@ -14,7 +14,7 @@
 
 #include "music/note.hpp"
 #include "synth/synthInterface.hpp"
-
+#include "windows.h"
 /* midifiles
 
 Once you got a virtual synth (see previous examples), you're
@@ -153,10 +153,12 @@ YSE::MIDI::file midiFile;
 YSE::Vec soundPos;
 
 test t;
-
+//definitely coming on another thread than the main.
 void notecb(bool noteOn, float * noteNumber, float * velocity, int* channel)
 {
-	printf("!%d %f %f %d\n", noteOn, *noteNumber, *velocity, *channel);
+	auto tid = GetCurrentThreadId();
+
+	printf("!%d %f %f %d tid:%d\n", noteOn, *noteNumber, *velocity, *channel, tid);
 }
 
 
@@ -215,6 +217,11 @@ int main()
 	std::cout << "4/5: move sound position to left/right" << std::endl;
 	std::cout << "e: to exit" << std::endl;
 
+	auto tid=GetCurrentThreadId();
+
+	printf("threadid:%d\n", tid);
+
+
 	Int counter = 0;
 	while (true) {
 
@@ -232,7 +239,8 @@ int main()
 			}
 		}
 
-		YSE::System().sleep(50);
+		YSE::System().sleep(2000); //doesn't seem to matter to the midiplayer, think this is just for the above loop
+		printf("------------------CYCLE\n");
 		YSE::System().update();
 
 	}
