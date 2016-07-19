@@ -171,7 +171,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Full</Optimization>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(REPOS)repos\YSE\yse-soundengine\demo\JuceLibraryCode\;$(REPOS)repos\JUCE\modules\;$(REPOS)repos\JUCE\;$(REPOS)repos\JUCE\modules\juce_audio_basics;$(REPOS)repos\YSE\yse-soundengine\yse</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(REPOS)repos\YSE\yse-soundengine\demo\JuceLibraryCode\;$(REPOS)repos\JUCE\modules\;$(REPOS)repos\JUCE\;$(REPOS)repos\JUCE\modules\juce_audio_basics;$(REPOS)repos\YSE\yse-soundengine\yse;$(REPOS)repos\yse-soundengine\demo\JuceLibraryCode\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>YSE_DLL_BUILD;YSE_MSVC;_LIB;_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;JUCE_CHECK_MEMORY_LEAKS=0;JUCER_VS2015_78A5022=1;JUCE_APP_VERSION=1.0.0;JUCE_APP_VERSION_HEX=0x10000;JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -220,7 +220,7 @@ copy $(OutputPath)$(TargetName).lib "$(EPIC_INSTALL)Engine\Binaries\Win64"</Comm
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(REPOS)repos\YSE\yse-soundengine\demo\JuceLibraryCode\;$(REPOS)repos\JUCE\modules\;$(REPOS)repos\JUCE\;$(REPOS)repos\JUCE\modules\juce_audio_basics;$(REPOS)repos\YSE\yse-soundengine\yse</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(REPOS)repos\YSE\yse-soundengine\demo\JuceLibraryCode\;$(REPOS)repos\JUCE\modules\;$(REPOS)repos\JUCE\;$(REPOS)repos\JUCE\modules\juce_audio_basics;$(REPOS)repos\YSE\yse-soundengine\yse;$(REPOS)repos\yse-soundengine\demo\JuceLibraryCode\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>YSE_DLL_BUILD;YSE_MSVC;_LIB;_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;_DEBUG;JUCE_CHECK_MEMORY_LEAKS=0;JUCER_VS2015_78A5022=1;JUCE_APP_VERSION=1.0.0;JUCE_APP_VERSION_HEX=0x10000;JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>

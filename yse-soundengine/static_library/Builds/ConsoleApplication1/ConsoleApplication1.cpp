@@ -203,7 +203,7 @@ int main()
 	
 	
 	
-	midiFile.create2(R"(c:\temp\demo.mid)");
+	midiFile.create(R"(c:\temp\demo.mid)");
 
 	//	midiFile.connect(&synth);
 	midiFile.connect(&t);
