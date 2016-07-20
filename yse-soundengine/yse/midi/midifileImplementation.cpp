@@ -27,7 +27,7 @@ YSE::MIDI::fileImpl::~fileImpl() {
 }
 
 bool YSE::MIDI::fileImpl::create(const std::string & fileName) {
-  assert(!hasFile);
+  //assert(!hasFile);
 
   if (!IO().getActive()) {
     File file = File::getCurrentWorkingDirectory().getChildFile(juce::String(fileName));
