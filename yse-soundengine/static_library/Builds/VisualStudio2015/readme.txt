@@ -7,3 +7,4 @@ mklink /J %repos%repos\YSE\yse-soundengine\static_library\JuceLibraryCode c:\rep
 
 junctions need to be made to link up juce. 
 
+Note that juceheader.h and one other are in /demo now. Git issues with the directory in there don't know why
