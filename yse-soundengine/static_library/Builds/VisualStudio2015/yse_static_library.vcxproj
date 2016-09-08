@@ -70,7 +70,7 @@
     <TargetName Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">yse_debug</TargetName>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release64|x64'">.\..\..\..\bin\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='DEBUGFOREVER|x64'">.\..\..\..\bin\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DEBUGFOREVER|x64'">$(REPOS)repos\YSE\yse-soundengine\bin</OutDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release64|x64'">libyse64</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='DEBUGFOREVER|x64'">libyse64_debug</TargetName>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release64|x64'">true</GenerateManifest>
@@ -240,7 +240,7 @@ copy $(OutputPath)$(TargetName).lib "$(EPIC_INSTALL)Engine\Binaries\Win64"</Comm
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
-      <OutputFile>$(OutDir)\libyse64.dll</OutputFile>
+      <OutputFile>$(OutDir)\$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>Debug</GenerateDebugInformation>
@@ -250,7 +250,7 @@ copy $(OutputPath)$(TargetName).lib "$(EPIC_INSTALL)Engine\Binaries\Win64"</Comm
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <LargeAddressAware>true</LargeAddressAware>
       <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
-      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
